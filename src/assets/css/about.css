@@ -1,0 +1,158 @@
+/* src/assets/css/about.css */
+:root {
+  --primary-neon: #00f2ff;
+  --secondary-neon: #7000ff;
+  --about-bg-color: #0a0b10;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+.about-wrapper {
+  min-height: 100vh;
+  background-color: var(--about-bg-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 40px 0;
+}
+
+.about-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--secondary-neon);
+  filter: blur(180px);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.about-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--primary-neon);
+  filter: blur(180px);
+  bottom: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.about-container {
+  width: 90%;
+  max-width: 1100px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-glass-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-neon);
+  box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+}
+
+.neon-text {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon);
+  margin-bottom: 5px;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.about-icon-box {
+  font-size: 2.5rem;
+  color: var(--primary-neon);
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px var(--primary-neon));
+}
+
+.about-container h3 {
+  font-size: 1.5rem;
+  color: var(--primary-neon);
+  margin-top: 0;
+}
+
+.about-container p {
+  line-height: 1.8;
+  color: #d1d1d1;
+  font-size: 1.05rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.feature-item i {
+  color: var(--secondary-neon);
+  font-size: 1.3rem;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-neon-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--glass-bg); 
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.btn-neon-link:hover {
+  background: rgba(127, 184, 216, 0.15); 
+  border-color: var(--primary-neon);
+  transform: translateY(-3px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-neon-link:active {
+  transform: translateY(0); 
+}
